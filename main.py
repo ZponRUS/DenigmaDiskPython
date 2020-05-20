@@ -17,16 +17,6 @@ B64_BLOCK_SIZE = 22369664  # 16mb
 
 print("DenigmaDisk By Zpon\nBlock Size: "+str(BLOCK_SIZE) + " Bytes\nAES "+str(pow(BLOCK_SIZE, 2))+" Bit")
 
-
-
-def existElem(arr, el):
-    try:
-        arr[el]
-        return True
-    except:
-        return False
-
-
 class DictList():
 
     def __init__(self, countOfBlocks, name):
@@ -169,7 +159,7 @@ if __name__ == '__main__':
         password = sys.argv[2]
         path = sys.argv[1]
     else:
-        exit("Error: Param.")
+        exit("Error: Param. Example:\nsudo python3 main.py [file or dir] [password]")
 
     if path[:1] in ["'", "\""]:
         path = path[1:-1]
